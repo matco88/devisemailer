@@ -9,6 +9,7 @@ end
 gem 'activerecord-session_store'
 gem "authlogic", "4.4.2"
 gem 'authlogic-oid'
+gem 'bootstrap'
 gem "composite_primary_keys"
 gem 'figaro'
 gem 'friendly_id'
@@ -87,6 +88,7 @@ gem 'coffee-rails', '~> 5.0.0'
 gem 'execjs' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'sassc-rails'
 gem 'therubyracer'
+# gem 'mini_racer'
 gem 'uglifier', '>= 1.0.3'
 gem 'grape-rails-cache'
 

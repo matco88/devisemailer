@@ -1,4 +1,3 @@
-//= require inline-markdown-editor/dist/inlineMarkdownEditor.js
 var wiki_title;
 
 function setupWiki(node_id, title, raw, logged_in) {
