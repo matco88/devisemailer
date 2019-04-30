@@ -79,6 +79,8 @@ gem 'sassc-rails'
 gem 'therubyracer'
 gem 'uglifier', '>= 1.0.3'
 gem 'grape-rails-cache'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
 group :development do
   gem 'byebug', platform: :mri
   gem "letter_opener"
