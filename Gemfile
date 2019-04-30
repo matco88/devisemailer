@@ -72,7 +72,7 @@ gem 'mailman', require: false
 # To convert html to markdown
 gem 'reverse_markdown'
 
-gem 'twitter'
+
 
 # run with `bundle install --without production` or `bundle install --without mysql` to exclude this
 group :mysql, :production do
