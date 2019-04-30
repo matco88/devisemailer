@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
-
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
 gem 'activerecord-session_store'
 gem "authlogic", "4.4.2"
 gem 'authlogic-oid'
@@ -59,6 +57,7 @@ gem 'sentry-raven'
 gem 'sidekiq'
 gem 'skylight' # performance tracking via skylight.io
 gem 'turbolinks', '~> 5'
+gem 'twitter'
 gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
 gem 'unicode-emoji'
 gem 'whenever', require: false
@@ -66,32 +65,20 @@ gem 'will_paginate', '>= 3.0.6'
 gem 'will_paginate-bootstrap4'
 gem 'jquery-atwho-rails'
 gem 'lemmatizer', '~> 0.2.2'
-# To implement incoming mail processing microframework
 gem 'mailman', require: false
-
-# To convert html to markdown
 gem 'reverse_markdown'
-
-
-
-# run with `bundle install --without production` or `bundle install --without mysql` to exclude this
 group :mysql, :production do
   gem 'mysql2', '>= 0.4.4'
-  # mysql 0.4.3+ causes a version mismatch, apparently, and demands 'activerecord-mysql2-adapter'
 end
-
 group :sqlite, :development do
   gem 'sqlite3', '~> 1.3.6'
 end
-
 gem 'coffee-rails', '~> 5.0.0'
 gem 'execjs' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'sassc-rails'
 gem 'therubyracer'
-# gem 'mini_racer'
 gem 'uglifier', '>= 1.0.3'
 gem 'grape-rails-cache'
-
 group :development do
   gem 'byebug', platform: :mri
   gem "letter_opener"
@@ -99,7 +86,6 @@ group :development do
   gem "nifty-generators"
   gem 'web-console', '>= 3.3.0'
 end
-
 group :test, :development do
   gem 'capybara'
   gem 'ci_reporter_test_unit'
@@ -121,7 +107,6 @@ group :test, :development do
   gem 'timecop'
   gem 'pry-rails'
 end
-
 group :production do
   gem "scrypt", "~> 3"
 end
